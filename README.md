@@ -6,5 +6,4 @@ This is a legacy webOS website to download, explore stuff ecc... THIS IS NOT MEA
 - 🚹 Palm Pleroma [Pleroma](https://palm.weboslives.eu/main/public)
 
 ### ⚠️WARNING⚠️
-
-A url migration request was made and sent to the legacy webOS community because davidmodphone.github.io/legacywebOS is too long, the url will be migrated as legacywebos.wosa.link
+The URL is Now legacywebos.wosa.link, however the website is not accessible so i will now have wait to fully apply the changes and dns propagation
