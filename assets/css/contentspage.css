@@ -1,0 +1,278 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Roboto", sans-serif;
+}
+.logo {
+    width: 160px;
+    margin: 5 9px;
+    cursor: pointer;
+}
+
+html {
+    -webkit-tap-highlight-color: transparent;
+}
+
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+
+body {
+    font-family: "Roboto", sans-serif;
+    background: url('background.png') no-repeat center center fixed;
+    background-size: cover;
+    color: white;
+}
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: rgb(15, 15, 15);
+    z-index: 100;
+}
+
+.flex {
+    display: flex;
+    align-items: center;
+}
+
+.container {
+    max-width: 1200px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.navbar {
+    justify-content: space-between;
+}
+
+.navbar a {
+    color: white;
+    padding: 20px 0;
+    display: inline-block;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.navbarbtns {
+    gap: 20px;  
+    list-style: none;
+}
+
+.navbar a:hover {
+    color: gray;
+}
+
+/* Content CSS */
+main {
+    margin-top: 100px;
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.767);
+}
+
+h1 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+p {
+    font-size: 1.0rem;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.cards {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 20px; /* Add space between cards */
+}
+
+.card {
+    width: calc(33.333% - 20px); /* Adjust width and spacing for cards */
+    padding: 20px;
+    border: 2px solid #333; /* Dark border to define the box */
+    background-color: #fff; /* White background for contrast */
+    border-radius: 0px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    color: #333; /* Dark text color for readability */
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center align text and button */
+    text-align: center; /* Center align text */
+}
+
+.card a {
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+    background: rgb(0, 0, 0);
+    padding: 3px;
+    box-shadow: none;
+    font-size: 13px;
+    transition: 0.3s;
+    padding-top: 3px;
+    border-radius: 0px;
+}
+
+.card a:hover {
+    color: white;
+    background: rgb(248, 113, 3);
+}
+
+.card img {
+    max-width: 80%; /* Reduce image size to 80% of the card width */
+    height: auto; /* Maintain aspect ratio */
+    margin-bottom: 15px; /* Space between image and text */
+}
+.card h2 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+    color: #000; /* Dark color for headings */
+}
+
+.card p {
+    font-size: 1rem;
+    color: #555; /* Slightly lighter color for text */
+    margin-bottom: 15px; /* Space between text and button */
+}
+
+.copy-btn {
+    background-color: #007bff; /* Button color */
+    color: #fff; /* Button text color */
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 0.9rem;
+    transition: background-color 0.3s ease;
+}
+
+.copy-btn:hover {
+    background-color: #0056b3; /* Darker color on hover */
+}
+/* Footer */
+footer {
+    background-color: rgba(15, 15, 15, 0.9);
+    padding: 20px 0;
+    text-align: center;
+    width: 100%;
+}
+
+footer span {
+    color: white;
+    font-size: 0.9rem;
+}
+
+footer a {
+    color: #a1a1a1;
+    text-decoration: none;
+}
+/* Menu Toggler*/
+#menu-toggle, #hamburger-menu {
+    display: none;
+}
+
+/* Preloader */
+
+#preloader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #fff;
+    /* change if the mask should have another color then white */
+    z-index: 99;
+    /* makes sure it stays on top */
+}
+
+.no-scroll {
+    overflow: hidden;
+ }
+
+#status {
+    width: 200px;
+    height: 200px;
+    position: absolute;
+    left: 50%;
+    /* centers the loading animation horizontally one the screen */
+    top: 50%;
+    /* centers the loading animation vertically one the screen */
+    background-image: url(status.gif);
+    /* path to your loading animation */
+    background-repeat: no-repeat;
+    background-position: center;
+    margin: -100px 0 0 -100px;
+    /* is width and height divided by two */
+}
+
+/* Responsive Styles */
+@media (max-width: 1024px) {
+    .card {
+        width: calc(50% - 20px); /* Adjust width for tablets */
+    }
+
+    h1 {
+        font-size: 2rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .card {
+        width: calc(100% - 20px); /* Full width on small devices */
+    }
+
+    h1 {
+        font-size: 1.8rem;
+    }
+}
+
+@media (max-width: 560px) {
+    .navbar .navbarbtns {
+        position: fixed;
+        top: 65px;
+        left: 0;
+        height: 100%;
+        background: rgb(15, 15, 15);
+        width: 250px;
+        padding-left: 20px;
+        padding-top: 30px;
+        left: -100%;
+        transition: all 0.3s ease;
+    }
+
+    #menu-toggle:checked ~ .navbarbtns {
+        left: 0;
+    }
+
+    .navbarbtns li {
+        font-size: 20px;
+    }
+
+    #hamburger-menu {
+        display: block;
+        color: white;
+        font-size: 22px;
+        cursor: pointer;
+    }
+
+    .card {
+        width: calc(100% - 20px); /* Full width on mobile */
+    }
+
+    h1 {
+        font-size: 1.5rem;
+    }
+}

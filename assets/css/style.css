@@ -1,0 +1,289 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Roboto", sans-serif;
+}
+.logo {
+    width: 160px;
+    margin: 5 9px;
+    cursor: pointer;
+}
+
+html {
+    -webkit-tap-highlight-color: transparent;
+}
+
+
+body {
+    background: #ffffff;
+}
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: rgb(15, 15, 15);
+    z-index: 100;
+}
+
+.flex {
+    display: flex;
+    align-items: center;
+}
+
+.container {
+    max-width: 1200px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.navbar {
+    justify-content: space-between;
+}
+
+.navbar a {
+    color: white;
+    padding: 20px 0;
+    display: inline-block;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.navbarbtns {
+    gap: 20px;  
+    list-style: none;
+}
+
+.navbar a:hover {
+    color: gray;
+}
+
+/* Homepage CSS Code */
+
+.main{
+    position: relative;
+    height: 100vh;
+    width: 100%;
+    background: url(background.png);
+    background-position: center;
+    background-size: cover;
+}
+
+.main::before {
+    content: "";
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    background: rgba(0,0,0,0.75);
+} 
+
+.main .content {
+    position: relative;
+    height: 100%;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.main .text {
+    color: white;
+    text-align: center;
+    font-size: 30px;
+    margin-bottom: 20px;
+}
+
+.main a {
+    color: black;
+    text-decoration: none;
+    background: white;
+    padding: 10px 30px;
+    box-shadow: none;
+    font-size: 15px;
+    transition: 0.3s;
+}
+
+.main a:hover {
+    color: white;
+    background: rgb(231, 108, 7);
+}
+
+/* Card CSS code */
+section {
+    padding-top: 80px;
+}
+
+.section-title {
+    text-align: center;
+}
+
+section h2 {
+    font-size: 2rem;
+}
+
+section .cards {
+    margin-top: 50px;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+section .card {
+    width: calc(100% / 3 - 30px);
+    text-align: center;
+    list-style: none;
+    background-color: white;
+    padding: 40px 15px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 40px;
+}
+
+section .card img {
+    height: 120px;
+    width: 120px;
+    border-radius: 50%;
+    margin-bottom: 20px;
+}
+
+/* Portfolio style CSS code */
+.portfolio .card {
+    padding: 0 0 20px;
+}
+
+.portfolio .card img {
+    height: 240px;
+    width: 100%;
+    border-radius: 0px 0px 0 0;
+}
+
+.portfolio a {
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+    background: rgb(0, 0, 0);
+    padding: 3px;
+    box-shadow: none;
+    font-size: 16px;
+    transition: 0.3s;
+    padding-top: 2px;
+}
+
+.portfolio a:hover {
+    color: white;
+    background: rgb(255, 123, 0);
+}
+
+/* Footer */
+footer {
+    background-color: rgba(15, 15, 15, 0.9);
+    padding: 20px 0;
+    text-align: center;
+    width: 100%;
+}
+
+footer span {
+    color: white;
+    font-size: 0.9rem;
+}
+
+footer a {
+    color: #a1a1a1;
+    text-decoration: none;
+}
+
+
+#menu-toggle, #hamburger-menu {
+    display: none;
+}
+
+/* Preloader */
+
+#preloader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #fff;
+    /* change if the mask should have another color then white */
+    z-index: 99;
+    /* makes sure it stays on top */
+}
+
+.no-scroll {
+    overflow: hidden;
+ }
+
+#status {
+    width: 200px;
+    height: 200px;
+    position: absolute;
+    left: 50%;
+    /* centers the loading animation horizontally one the screen */
+    top: 50%;
+    /* centers the loading animation vertically one the screen */
+    background-image: url(status.gif);
+    /* path to your loading animation */
+    background-repeat: no-repeat;
+    background-position: center;
+    margin: -100px 0 0 -100px;
+    /* is width and height divided by two */
+}
+
+
+/* Responsive Style Code */
+@media (width < 860px) {
+    .navbar .navbarbtns {
+        position: fixed;
+        top: 65px;
+        left: 0;
+        height: 100%;
+        display: block;
+        background: rgb(15, 15, 15);
+        width: 300px;
+        padding-left: 20px;
+        padding-top: 30px;
+        left: -100%;
+        transition: all 0.3s ease;
+    }
+
+    .portfolio .card img {
+        height: auto;
+        width: 100%;
+        border-radius: 0px 0px 0 0;
+    } 
+
+    #menu-toggle:checked ~ .navbarbtns {
+        left: 0;
+    }
+    
+    .navbarbtns li {
+        font-size: 20px;
+    }
+    
+    #hamburger-menu {
+        display: block;
+        color: white;
+        font-size: 22px;
+        cursor: pointer;
+    }
+
+    section .cards .card {
+        width: calc(100% / 2 -15px);
+    }
+}
+
+@media (width < 560px) {
+    section .cards .card {
+        width: 100%;
+    }
+    .homepage .text h1 {
+        font-size: 30px;
+    }
+    section h2 {
+        font-size: 1.5rem;
+    }
+}
